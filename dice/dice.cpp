@@ -14,18 +14,24 @@ int dice::Roll()
 }
 
 float dice::average(dice x, int numOfRolls) {
-	float sum;
-	for (int i; i <= numOfRolls; i++)
+	float sum = 0;
+	for (int i=0; i <= numOfRolls; i++)
 	{
-		float sum += x.Roll();
+		 sum += x.Roll();
 	}
 
 	float avg = sum / numOfRolls;
-	return avg
-
+	return avg;
 }
-float dice::average(int* y, int valuesInArry){
+float dice::average(int array[], int valuesInArry){
+	float sum1 = 0;
+	for (int i=0; i <= valuesInArry; i++)
+	{
+		sum1 += array[i];
+	}
 
+	float av0g = sum1 / valuesInArry;
+	return av0g;
 }
 dice::~dice()
 {
